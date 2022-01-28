@@ -3,7 +3,7 @@
 This repository stores:
 - the annotation guide that was used for the analysis of neologisms and base verbs (annotation_guidelines.pdf)
 - the dataset with examples (data_annotated.xlsx)
-- the dataset for statistical analyses (data_statistics.txt)
+- the dataset that was used for statistical analyses (data_statistics.txt)
 - the R script that was used for statistical analyses (analysis_script.R)
 - visual representations of the data according to each variable (graphics)
 
