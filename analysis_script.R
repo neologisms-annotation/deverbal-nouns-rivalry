@@ -41,7 +41,7 @@ library(party)
 
 # Step 1: run random forest
 set.seed(10)
-rf <- cforest(suffix ~ ., controls = cforest_unbiased(), data=data2)
+rf <- cforest(suffix ~ ., controls = cforest_unbiased(ntree=3000, mtry=5), data=data2)
 
 # Step 2: Confusion matrix
 oobPredicted=predict(rf,OOB=T)
