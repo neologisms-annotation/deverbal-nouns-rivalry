@@ -7,7 +7,7 @@ This repository stores:
 - the R script that was used for statistical analyses (analysis_script.R)
 - visual representations of the data according to each variable (graphics)
 
-The dataset contains the following columns:
+The dataset with examples contains the following columns:
 - 'noun': deverbal neologism ending in -age, -ion or -ment (numbers are used to differentiate meanings)
 - 'verb': base verb (numbers are used to differentiate meanings)
 - 'ex_n': example sentence
