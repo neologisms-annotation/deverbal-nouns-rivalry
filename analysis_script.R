@@ -17,24 +17,10 @@ summary(data)
 # Step 3: remove variable (column) not under study
 data2=data[,-1]
 
-##############################################
-# PART 1: CORRELATION ANALYSIS
-##############################################
 
-library("rcompanion")
-
-# We estimate all pairwise associations between properties
-cont_table <- table(data$v_dyn, data$v_dur)
-
-chisq.test(cont_table, correct = TRUE)
-chisq.test(cont_table, simulate.p.value = TRUE)
-cramerV(cont_table)
-
-
-
-##############################################
-# PART 2: SUPERVISED METHOD -  RANDOM FOREST
-##############################################
+#######################################################
+# PART 1: SUPERVISED METHOD -  RANDOM FOREST ANALYSIS
+#######################################################
 
 # Load packages
 library(party)
@@ -56,7 +42,7 @@ plot(imp, type = "dot")
 
 
 ##########################################################
-# PART 3: UNSUPERVISED METHODs - HIERARCHICAL CLUSTERING
+# PART 2: UNSUPERVISED METHODS - HIERARCHICAL CLUSTERING
 ##########################################################
 
 
@@ -82,9 +68,9 @@ table(grps, SUFFIX)
 
 
 
-#########################################
-# PART 4: UNSUPERVISED METHODs - t-SNE 
-#########################################
+##############################################################
+# PART 3: UNSUPERVISED METHODS - t-SNE DIMENSIONAL REDUCTION
+##############################################################
 
 # Load package 
 library(Rtsne)
