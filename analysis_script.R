@@ -11,7 +11,7 @@
 # Step 1: set working directory
 
 # Step 2: load data
-data <- read.table("affrix_publi1_dataset.txt", header = TRUE, stringsAsFactors = TRUE )
+data <- read.table("data_statistics.txt", header = TRUE, stringsAsFactors = TRUE )
 summary(data)
 
 # Step 3: remove variable (column) not under study
@@ -76,8 +76,8 @@ table(grps, SUFFIX)
 library(Rtsne)
 
 # Step 1: run t-SNE
-set.seed(1)
-resTSNE <-  Rtsne(mdist2, perplexity=10, is_distance = TRUE, pca = FALSE)
+set.seed(23)
+resTSNE <-  Rtsne(dist, perplexity=10, is_distance = TRUE, pca = FALSE)
 
 # Step 2: visualize t-SNE with suffix projection
 library(ggplot2)
